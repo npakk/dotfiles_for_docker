@@ -1,8 +1,8 @@
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi
 
 typeset -gU PATH            # PATHの重複回避
 export LANG=ja_JP.UTF-8
@@ -220,18 +220,18 @@ export FZF_ALT_C_COMMAND="fd -t d --hidden --follow ${IGNORE_ELEMENTS} . '${HOME
 export FZF_ALT_C_OPTS="--preview 'eza --long --all --git -I \".DS_Store|.localized\" {}'"
 
 # zinit
-ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
-[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
-[ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
-source "${ZINIT_HOME}/zinit.zsh"
-
-autoload -Uz _zinit
-(( ${+_comps} )) && _comps[zinit]=_zinit
-
-zinit ice depth=1; zinit light romkatv/powerlevel10k 
-zinit light zsh-users/zsh-completions
-zinit light zsh-users/zsh-syntax-highlighting
-zinit light zsh-users/zsh-autosuggestions
-
-# To customize prompt, run `p10k configure` or edit ~/dotfiles/config/zsh/.p10k.zsh.
-[[ ! -f ~/dotfiles/config/zsh/.p10k.zsh ]] || source ~/dotfiles/config/zsh/.p10k.zsh
+# ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+# [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
+# [ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+# source "${ZINIT_HOME}/zinit.zsh"
+#
+# autoload -Uz _zinit
+# (( ${+_comps} )) && _comps[zinit]=_zinit
+#
+# zinit ice depth=1; zinit light romkatv/powerlevel10k 
+# zinit light zsh-users/zsh-completions
+# zinit light zsh-users/zsh-syntax-highlighting
+# zinit light zsh-users/zsh-autosuggestions
+#
+# # To customize prompt, run `p10k configure` or edit ~/dotfiles/config/zsh/.p10k.zsh.
+# [[ ! -f ~/dotfiles/config/zsh/.p10k.zsh ]] || source ~/dotfiles/config/zsh/.p10k.zsh
