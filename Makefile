@@ -1,7 +1,6 @@
 install:
 	mkdir -p ~/.cache/zsh \
 	~/.config/zsh \
-	~/.config/fzf \
 	~/.config/git \
 	~/.config/gh \
 	~/.config/lazygit \
