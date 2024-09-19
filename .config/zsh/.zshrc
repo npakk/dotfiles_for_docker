@@ -209,7 +209,7 @@ export PATH="/usr/local/bin/git:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 
 # z
-. `brew --prefix`/etc/profile.d/z.sh
+. $(brew --prefix)/etc/profile.d/z.sh
 
 # fzf
 [ -f ${XDG_CONFIG_HOME}/fzf/.fzf.zsh ] && source ${XDG_CONFIG_HOME}/fzf/.fzf.zsh
