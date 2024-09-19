@@ -1,5 +1,4 @@
 install:
-	rm ~/.bash_logout ~/.bashrc ~/.profile
 	mkdir -p ~/.cache/zsh \
 	~/.config/zsh \
 	~/.config/fzf \
