@@ -21,3 +21,4 @@ install:
 	ln -s ~/dotfiles/.config/nvim/selene.toml ~/.config/nvim/selene.toml
 	ln -s ~/dotfiles/.config/nvim/vim.toml ~/.config/nvim/vim.toml
 	brew bundle --file ./Brewfile
+	source ~/.zshenv
