@@ -1,3 +1,5 @@
+SHELL := /bin/zsh
+
 install:
 	mkdir -p ~/.cache/zsh \
 	~/.config/zsh \
