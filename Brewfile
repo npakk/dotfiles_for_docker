@@ -8,7 +8,6 @@ brew "ghq"
 brew "git-delta"
 brew "jq"
 brew "lazygit"
-brew "tree-sitter", args: ["HEAD"]
 brew "ripgrep"
 brew "tree"
 brew "yarn"
