@@ -1,6 +1,5 @@
-[user]
-	name = npakk
-	email = npakk669@gmail.com
+[include]
+	path = ~/.gitconfig.local
 [core]
 	editor = nvim
 	pager = delta
@@ -10,12 +9,6 @@
 	alogorithm = histogram
 [color]
 	ui = auto
-[alias]
-	co = checkout
-	s = status
-	b = branch
-	c = commit
-	ps = push
 [delta]
 	syntax-theme = Solarized (dark)
 	navigate = true
