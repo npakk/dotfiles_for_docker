@@ -212,7 +212,9 @@ export PATH="/usr/local/sbin:$PATH"
 . $(brew --prefix)/etc/profile.d/z.sh
 
 # fzf
-[ -f ${XDG_CONFIG_HOME}/fzf/.fzf.zsh ] && source ${XDG_CONFIG_HOME}/fzf/.fzf.zsh
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+# [ -f ${XDG_CONFIG_HOME}/fzf/.fzf.zsh ] && source ${XDG_CONFIG_HOME}/fzf/.fzf.zsh
 export IGNORE_ELEMENTS="-E .git -E node_modules -E .cache -E \"*cache*\" -E .DS_Store -E .localized -E .Trash -E Library -E Documents -E Downloads -E Applications -E Pictures -E Movies"
 export FZF_CTRL_T_COMMAND="fd --hidden --follow ${IGNORE_ELEMENTS}"
 export FZF_CTRL_T_OPTS="--preview 'bat --color=always --style=numbers,changes,header --line-range :100 {}'"
