@@ -1,5 +1,5 @@
 .PHONY: all
-all: install update
+all: install
 
 install: Brewfile ./scripts/gitconfig.local.sh
 	@brew bundle --file Brewfile
