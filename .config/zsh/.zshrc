@@ -50,6 +50,18 @@ then
 
   # z
   . $(brew --prefix)/etc/profile.d/z.sh
+
+  # powerlevel10k
+  source "$(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme"
+
+  # zsh-autosuggestions
+  source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+
+  # zsh-completions
+  FPATH="$(brew --prefix)/share/zsh-completions:${FPATH}"
+
+  # zsh-syntax-highlighting
+  source "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 fi
 
 autoload -Uz compinit
