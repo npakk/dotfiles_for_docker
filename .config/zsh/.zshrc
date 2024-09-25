@@ -44,9 +44,6 @@ export SAVEHIST=100000
 
 # Homebrew
 if type brew &> /dev/null; then
-  # GitHub CLI completion.must load before compinit
-  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-
   # z
   . $(brew --prefix)/etc/profile.d/z.sh
 
@@ -56,11 +53,14 @@ if type brew &> /dev/null; then
   # zsh-autosuggestions
   source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
+  # zsh-syntax-highlighting
+  source "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+
   # zsh-completions
   FPATH="$(brew --prefix)/share/zsh-completions:${FPATH}"
 
-  # zsh-syntax-highlighting
-  source "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+  # GitHub CLI completion
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 fi
 
 autoload -Uz compinit
