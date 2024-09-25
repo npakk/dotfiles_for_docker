@@ -43,8 +43,7 @@ export HISTSIZE=1000
 export SAVEHIST=100000
 
 # Homebrew
-if type brew &>/dev/null
-then
+if type brew &> /dev/null; then
   # GitHub CLI completion.must load before compinit
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
