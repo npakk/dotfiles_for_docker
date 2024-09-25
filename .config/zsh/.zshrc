@@ -138,41 +138,6 @@ bindkey '^l' clear-screen-or-right-pane
 bindkey '^h' backspace-or-left-pane
 bindkey '^j' accept-line-or-down-pane
 
-# go
-export GOPATH=$HOME/go
-export GOENV_ROOT="$XDG_DATA_HOME/goenv"
-export PATH="$GOENV_ROOT/bin:$PATH"
-export PATH="$GOENV_ROOT/shims:$PATH"
-
-# python
-export PYENV_ROOT="$XDG_DATA_HOME/pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-export PATH="$PYENV_ROOT/shims:${PATH}"
-
-# ruby
-export RBENV_ROOT="$XDG_DATA_HOME/rbenv"
-export PATH="$RBENV_ROOT/bin:$PATH"
-export PATH="$RBENV_ROOT/shims:${PATH}"
-
-# gem
-export GEM_HOME="$XDG_DATA_HOME/.gem"
-export GEM_SPEC_CACHE="$XDG_CACHE_HOME/.gem"
-
-# bundler
-export BUNDLE_USER_HOME="$HOME/.bundle"
-export BUNDLE_USER_CONFIG="$XDG_CONFIG_HOME/.bundle"
-export BUNDLE_USER_CACHE="$XDG_CACHE_HOME/.bundle"
-export BUNDLE_USER_PLUGIN="$XDG_DATA_HOME/.bundle"
-
-# n
-export N_PREFIX="$XDG_DATA_HOME/n"
-export PATH="$N_PREFIX/bin:$PATH"
-
-# rustup
-export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
-export CARGO_HOME="$HOME/.cargo"
-export PATH="$CARGO_HOME/bin:$PATH"
-
 # fzf
 source <(fzf --zsh)
 IGNORE_ELEMENTS="-E .git -E node_modules -E .cache -E \"*cache*\""
