@@ -1,10 +1,10 @@
 .PHONY: all
-all: Brewfile gitconfig.local.sh install update
+all: install update
 
-install: Brewfile gitconfig.local.sh
+install: Brewfile ./scripts/gitconfig.local.sh
 	@brew bundle --file Brewfile
-	@chmod +x ./gitconfig.local.sh
-	@./gitconfig.local.sh
+	@chmod +x ./scripts/gitconfig.local.sh
+	@./scripts/gitconfig.local.sh
 
 update: Brewfile
 	@brew update
