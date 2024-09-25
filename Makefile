@@ -1,13 +1,12 @@
 .PHONY: all
 all: install
 
-install: Brewfile ./scripts/gitconfig.local.sh
+install: Brewfile ./scripts/gitconfig.local.sh ~/.config/zsh/.zcompdump
 	@brew bundle --file Brewfile
 	@chmod +x ./scripts/gitconfig.local.sh
 	@./scripts/gitconfig.local.sh
 	@rm -f ~/.config/zsh/.zcompdump
 	@tmux
-	@echo "press prefix+I"
 
 update:
 	@brew update
