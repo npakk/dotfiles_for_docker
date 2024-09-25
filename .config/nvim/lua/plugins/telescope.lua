@@ -17,7 +17,7 @@ return {
     keys = {
       { "<leader>cd", "<cmd>lua require('telescope.builtin').find_files({cwd = '~/dotfiles', hidden = true})<CR>",             desc = "Telescope dotfiles" },
       { "<leader>cn", "<cmd>lua require('telescope.builtin').find_files({cwd = '~/dotfiles/config/nvim', hidden = true})<CR>", desc = "Telescope nvim_dotfiles" },
-      { "<leader>f",  "<cmd>Telescope find_files<CR>",                                                                         desc = "Telescope find_files" },
+      { "<leader>f",  "<cmd>lua require('telescope.builtin').find_files({hidden = true})<CR>",                                 desc = "Telescope find_files" },
       { "<leader>g",  "<cmd>Telescope live_grep<CR>",                                                                          desc = "Telescope live_grep" },
       { "<leader>h",  "<cmd>Telescope help_tags<CR>",                                                                          desc = "Telescope help_tags" },
     },
