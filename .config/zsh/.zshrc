@@ -22,14 +22,14 @@ setopt pushd_ignore_dups    # 重複するディレクトリはpushdに記録し
 setopt globdots             # 明確なドットの指定なしで.から始まるファイルをマッチ
 
 alias cat='bat'
-alias v='nvim'
-alias j='z'
-alias ls='eza -a -F'
-alias la='eza -a -F -l --git'
 alias find='fd'
 alias grep='rg'
-alias sd='cd_ghq_on_fzf'
+alias j='z'
+alias la='eza -a -F -l --git'
 alias lg='lazygit'
+alias ls='eza -a -F'
+alias sd='cd_ghq_on_fzf'
+alias v='nvim'
 
 autoload -Uz cd_ghq_on_fzf
 autoload -Uz tmuxpopup
