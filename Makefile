@@ -2,9 +2,9 @@
 all: install
 
 install: import ./scripts/gitconfig.local.sh ~/.config/zsh/.zcompdump
-	# @chmod +x ./scripts/gitconfig.local.sh
-	# @./scripts/gitconfig.local.sh
-	# @rm -f ~/.config/zsh/.zcompdump
+	@chmod +x ./scripts/gitconfig.local.sh
+	@./scripts/gitconfig.local.sh
+	@rm -f ~/.config/zsh/.zcompdump
 
 update:
 	@brew update
