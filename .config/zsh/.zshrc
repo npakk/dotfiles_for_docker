@@ -1,10 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 typeset -gU PATH            # PATHの重複回避
 export LANG=ja_JP.UTF-8
 
@@ -53,9 +46,6 @@ export SAVEHIST=100000
 if type brew &> /dev/null; then
   # z
   . $(brew --prefix)/etc/profile.d/z.sh
-
-  # powerlevel10k
-  source "$(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme"
 
   # zsh-autosuggestions
   source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
@@ -163,6 +153,3 @@ export FZF_CTRL_T_COMMAND="fd --hidden --follow ${IGNORE_ELEMENTS}"
 export FZF_CTRL_T_OPTS="--preview 'bat --color=always --style=numbers,changes,header --line-range :100 {}'"
 export FZF_ALT_C_COMMAND="fd -t d --hidden --follow ${IGNORE_ELEMENTS} . '${HOME}'"
 export FZF_ALT_C_OPTS="--preview 'eza -a -l --git {}'"
-
-# To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
-[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
