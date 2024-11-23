@@ -153,3 +153,6 @@ export FZF_CTRL_T_COMMAND="fd --hidden --follow ${IGNORE_ELEMENTS}"
 export FZF_CTRL_T_OPTS="--preview 'bat --color=always --style=numbers,changes,header --line-range :100 {}'"
 export FZF_ALT_C_COMMAND="fd -t d --hidden --follow ${IGNORE_ELEMENTS} . '${HOME}'"
 export FZF_ALT_C_OPTS="--preview 'eza -a -l --git {}'"
+
+# starship
+eval "$(starship init zsh)"
