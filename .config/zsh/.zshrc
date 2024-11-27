@@ -61,7 +61,7 @@ if type brew &> /dev/null; then
 fi
 
 autoload -Uz compinit
-compinit
+compinit -Cd "$XDG_CACHE_HOME/zsh/.zcompdump"
 zstyle ':completion:*:default' menu select interactive
 zstyle ':completion:*' list-colors "${LS_COLORS}"
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' '+m:{[:upper:]}={[:lower:]}'
