@@ -57,7 +57,6 @@ export SAVEHIST=100000
 # GitHub CLI completion
 gh completion -s zsh > "$XDG_DATA_HOME/zsh/completions/_gh"
 
-# rm -f $XDG_CONFIG_HOME/zsh/.zcompdump
 autoload -Uz compinit
 compinit -i -d "$XDG_CACHE_HOME/zsh/.zcompdump"
 zstyle ':completion:*:default' menu select interactive
