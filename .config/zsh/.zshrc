@@ -46,6 +46,8 @@ export SAVEHIST=100000
 . "$XDG_DATA_HOME/z/path/to/z.sh"
 
 # # zsh-autosuggestions
+source "$XDG_DATA_HOME/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh"
+
 # source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 #
 # # zsh-syntax-highlighting
