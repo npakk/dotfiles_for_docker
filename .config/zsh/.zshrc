@@ -58,7 +58,7 @@ export SAVEHIST=100000
 # FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
 autoload -Uz compinit -d "$XDG_CACHE_HOME/zsh/.zcompdump"
-compinit -d "$XDG_CACHE_HOME/zsh/.zcompdump"
+compinit -id "$XDG_CACHE_HOME/zsh/.zcompdump"
 zstyle ':completion:*:default' menu select interactive
 zstyle ':completion:*' list-colors "${LS_COLORS}"
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' '+m:{[:upper:]}={[:lower:]}'
