@@ -1,3 +1,6 @@
+autoload -Uz compinit
+compinit -id "$XDG_CACHE_HOME/zsh/.zcompdump"
+
 typeset -gU PATH            # PATHの重複回避
 export LANG=ja_JP.UTF-8
 
@@ -57,8 +60,6 @@ export SAVEHIST=100000
 # # GitHub CLI completion
 # FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
-autoload -Uz compinit -d "$XDG_CACHE_HOME/zsh/.zcompdump"
-compinit -id "$XDG_CACHE_HOME/zsh/.zcompdump"
 zstyle ':completion:*:default' menu select interactive
 zstyle ':completion:*' list-colors "${LS_COLORS}"
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' '+m:{[:upper:]}={[:lower:]}'
