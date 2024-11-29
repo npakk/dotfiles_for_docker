@@ -45,7 +45,7 @@ export SAVEHIST=100000
 # Homebrew
 if type brew &> /dev/null; then
   # z
-  . /path/to/z.sh
+  . ~/.cache/zsh/path/to/z.sh
 
   # zsh-autosuggestions
   source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
