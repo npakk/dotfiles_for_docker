@@ -51,19 +51,17 @@ export SAVEHIST=100000
 # # zsh-syntax-highlighting
 # source "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 #
-# # zsh-completions
+# zsh-completions
 # FPATH="$(brew --prefix)/share/zsh-completions:${FPATH}"
-#
-# GitHub CLI completion
-FPATH="$XDG_DATA_HOME/zsh/site-functions:${FPATH}"
-gh completion -s zsh > "$XDG_DATA_HOME/zsh/site-functions/_gh"
 
-# if [ -e $XDG_CONFIG_HOME/zsh/.zcompdump ]; then
-#     rm $XDG_CONFIG_HOME/zsh/.zcompdump
-# fi
-rm -f $XDG_CONFIG_HOME/zsh/.zcompdump
+# GitHub CLI completion
+FPATH="$XDG_DATA_HOME/zsh/completions:${FPATH}"
+gh completion -s zsh > "$XDG_DATA_HOME/zsh/completions/_gh"
+
+# rm -f $XDG_CONFIG_HOME/zsh/.zcompdump
 autoload -Uz compinit
-compinit -i -d "$XDG_CACHE_HOME/zsh/.zcompdump"
+# compinit -i -d "$XDG_CACHE_HOME/zsh/.zcompdump"
+compinit
 zstyle ':completion:*:default' menu select interactive
 zstyle ':completion:*' list-colors "${LS_COLORS}"
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' '+m:{[:upper:]}={[:lower:]}'
