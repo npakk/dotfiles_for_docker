@@ -59,8 +59,7 @@ gh completion -s zsh > "$XDG_DATA_HOME/zsh/completions/_gh"
 
 # rm -f $XDG_CONFIG_HOME/zsh/.zcompdump
 autoload -Uz compinit
-# compinit -i -d "$XDG_CACHE_HOME/zsh/.zcompdump"
-compinit
+compinit -i -d "$XDG_CACHE_HOME/zsh/.zcompdump"
 zstyle ':completion:*:default' menu select interactive
 zstyle ':completion:*' list-colors "${LS_COLORS}"
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' '+m:{[:upper:]}={[:lower:]}'
