@@ -38,7 +38,7 @@ autoload -Uz tmuxpopup
 function chpwd() { eza -a -F }
 
 # history
-export HISTFILE="$XDG_CACHE_HOME/zsh/.zsh_history"
+export HISTFILE="$XDG_STATE_HOME/zsh/.zsh_history"
 export HISTSIZE=1000
 export SAVEHIST=100000
 
