@@ -42,25 +42,22 @@ export HISTFILE="$XDG_CACHE_HOME/zsh/.zsh_history"
 export HISTSIZE=1000
 export SAVEHIST=100000
 
-# Homebrew
-if type brew &> /dev/null; then
-  # z
-  . ~/.cache/zsh/path/to/z.sh
+# z
+. ~/.local/share/z/path/to/z.sh
 
-  # zsh-autosuggestions
-  source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+# # zsh-autosuggestions
+# source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+#
+# # zsh-syntax-highlighting
+# source "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+#
+# # zsh-completions
+# FPATH="$(brew --prefix)/share/zsh-completions:${FPATH}"
+#
+# # GitHub CLI completion
+# FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
-  # zsh-syntax-highlighting
-  source "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-
-  # zsh-completions
-  FPATH="$(brew --prefix)/share/zsh-completions:${FPATH}"
-
-  # GitHub CLI completion
-  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-fi
-
-autoload -Uz compinit
+autoload -Uz compinit -d "$XDG_CACHE_HOME/zsh/.zcompdump"
 compinit -d "$XDG_CACHE_HOME/zsh/.zcompdump"
 zstyle ':completion:*:default' menu select interactive
 zstyle ':completion:*' list-colors "${LS_COLORS}"
