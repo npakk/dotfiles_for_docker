@@ -45,12 +45,12 @@ export SAVEHIST=100000
 # z
 . "$XDG_DATA_HOME/z/path/to/z.sh"
 
-# # zsh-autosuggestions
+# zsh-autosuggestions
 source "$XDG_DATA_HOME/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
-# # zsh-syntax-highlighting
-# source "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-#
+# zsh-syntax-highlighting
+source "$XDG_DATA_HOME/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+
 # GitHub CLI completion
 gh completion -s zsh > "$XDG_DATA_HOME/zsh/completions/_gh"
 
