@@ -55,7 +55,6 @@ export SAVEHIST=100000
 # FPATH="$(brew --prefix)/share/zsh-completions:${FPATH}"
 
 # GitHub CLI completion
-FPATH="$XDG_DATA_HOME/zsh/completions:${FPATH}"
 gh completion -s zsh > "$XDG_DATA_HOME/zsh/completions/_gh"
 
 # rm -f $XDG_CONFIG_HOME/zsh/.zcompdump
