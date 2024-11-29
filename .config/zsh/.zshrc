@@ -55,10 +55,14 @@ export SAVEHIST=100000
 # FPATH="$(brew --prefix)/share/zsh-completions:${FPATH}"
 #
 # GitHub CLI completion
-FPATH="$XDG_DATA_HOME/zsh/site-functions:${FPATH}"
+# FPATH="$XDG_DATA_HOME/zsh/site-functions:${FPATH}"
+if ! [ -e $XDG_DATA_HOME/zsh/ ]; then
+    mkdir $XDG_DATA_HOME/zsh/site-functions
+fi
+gh completion -s zsh > "$XDG_DATA_HOME/zsh/site-functions/_gh"
 
-if [ -e ~/.config/zsh/.zcompdump ]; then
-    rm ~/.config/zsh/.zcompdump
+if [ -e $XDG_CONFIG_HOME/zsh/.zcompdump ]; then
+    rm $XDG_CONFIG_HOME/zsh/.zcompdump
 fi
 autoload -Uz compinit
 compinit -i -d "$XDG_CACHE_HOME/zsh/.zcompdump"
