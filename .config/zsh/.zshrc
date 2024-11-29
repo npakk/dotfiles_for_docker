@@ -61,9 +61,6 @@ if ! [ -e $XDG_DATA_HOME/zsh/site-functions ]; then
     gh completion -s zsh > "$XDG_DATA_HOME/zsh/site-functions/_gh"
 fi
 
-if [ -e $XDG_CONFIG_HOME/zsh/.zcompdump ]; then
-    rm $XDG_CONFIG_HOME/zsh/.zcompdump
-fi
 autoload -Uz compinit
 compinit -i -d "$XDG_CACHE_HOME/zsh/.zcompdump"
 zstyle ':completion:*:default' menu select interactive
