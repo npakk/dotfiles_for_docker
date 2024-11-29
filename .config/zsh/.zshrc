@@ -55,7 +55,7 @@ export SAVEHIST=100000
 # FPATH="$(brew --prefix)/share/zsh-completions:${FPATH}"
 #
 # GitHub CLI completion
-# FPATH="$XDG_DATA_HOME/zsh/site-functions:${FPATH}"
+FPATH="$XDG_DATA_HOME/zsh/site-functions:${FPATH}"
 if ! [ -e $XDG_DATA_HOME/zsh/site-functions ]; then
     mkdir -p $XDG_DATA_HOME/zsh/site-functions
     gh completion -s zsh > "$XDG_DATA_HOME/zsh/site-functions/_gh"
