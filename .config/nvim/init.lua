@@ -12,16 +12,6 @@ vim.g.loaded_perl_provider = 0
 
 vim.api.nvim_create_augroup("MyAutoCmd", { clear = true })
 
--- -- for obsidian.nvim
--- vim.api.nvim_create_autocmd({ "BufReadPre", "BufNewFile" }, {
---   group = "MyAutoCmd",
---   callback = function()
---     if vim.api.nvim_buf_get_name(0):match(vim.fn.expand("~") .. "/Documents/default/.*.md") then
---       vim.opt_local.conceallevel = 1
---     end
---   end,
--- })
-
 vim.cmd([[command CD cd %:h]]) -- cd cwd
 
 --[[ Settings ]]
