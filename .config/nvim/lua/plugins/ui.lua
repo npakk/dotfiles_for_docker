@@ -6,11 +6,14 @@ return {
       vim.cmd([[colorscheme iceberg]])
     end,
   },
-  -- {
-  --   "hoob3rt/lualine.nvim",
-  --   event = "VimEnter",
-  --   opts = { options = { icons_enabled = false, theme = "iceberg_dark" } },
-  -- },
+  {
+    "hoob3rt/lualine.nvim",
+    dependencies = {
+      { "nvim-tree/nvim-web-devicons" },
+    },
+    event = "VimEnter",
+    opts = { options = { icons_enabled = false, theme = "iceberg_dark" } },
+  },
   {
     "aserowy/tmux.nvim",
     keys = {
