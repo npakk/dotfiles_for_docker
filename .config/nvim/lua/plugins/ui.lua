@@ -8,11 +8,18 @@ return {
   },
   {
     "hoob3rt/lualine.nvim",
-    dependencies = {
-      { "nvim-tree/nvim-web-devicons" },
-    },
-    event = "VimEnter",
-    opts = { options = { icons_enabled = false, theme = "iceberg_dark" } },
+    event = "vimenter",
+    config = function()
+      require("lualine").setup({
+        options = {
+          icons_enabled = true,
+          globalstatus = true,
+          theme = "iceberg_dark",
+        },
+      })
+      vim.api.nvim_set_hl(0, "StatusLine", { bg = "none" })
+      vim.api.nvim_set_hl(0, "StatusLineNC", { bg = "none" })
+    end,
   },
   {
     "aserowy/tmux.nvim",
