@@ -126,8 +126,12 @@ return {
         ::continue::
       end
 
-      table.insert(null_sources, null_ls.builtins.diagnostics["selene"])
-      table.insert(null_sources, null_ls.builtins.formatting["stylua"])
+      if vim.fn.executable('selene') == 1 then
+        table.insert(null_sources, null_ls.builtins.diagnostics["selene"])
+      end
+      if vim.fn.executable('stylua') == 1 then
+        table.insert(null_sources, null_ls.builtins.formatting["stylua"])
+      end
 
       -- format on save
       local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
