@@ -15,7 +15,7 @@ return {
       mason.setup()
       mason_lspconfig.setup({
         ensure_installed = {
-          "lua_ls",
+          -- "lua_ls",
           -- "pyright",
           -- "ruff",
         },
@@ -106,7 +106,7 @@ return {
       require("mason-null-ls").setup({
         ensure_installed = {
           -- "selene",
-          "stylua",
+          -- "stylua",
         },
       })
 
@@ -114,9 +114,9 @@ return {
       local null_sources = {}
 
       for _, package in ipairs(mason_registry.get_installed_packages()) do
-        if package.name == "ruff" then
-          goto continue
-        end
+        -- if package.name == "ruff" then
+        --   goto continue
+        -- end
         local package_categories = package.spec.categories[1]
         if package_categories == mason_package.Cat.Formatter then
           table.insert(null_sources, null_ls.builtins.formatting[package.name])
@@ -126,6 +126,8 @@ return {
         end
         ::continue::
       end
+
+      table.insert(null_sources, null_ls.builtins.diagnostics["selene"])
 
       -- format on save
       local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
