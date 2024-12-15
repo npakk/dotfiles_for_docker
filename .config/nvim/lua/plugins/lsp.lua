@@ -1,5 +1,16 @@
 return {
   {
+    "neovim/nvim-lspconfig",
+    event = { "BufReadPre", "BufNewFile" },
+    config = function()
+      local lspconfig = require("lspconfig")
+      lspconfig["ruby_lsp"].setup({
+      })
+      lspconfig["rubocop"].setup({
+      })
+    end
+  },
+  {
     "williamboman/mason.nvim",
     dependencies = {
       { "neovim/nvim-lspconfig" },
