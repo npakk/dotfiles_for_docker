@@ -1,22 +1,23 @@
 return {
   {
     "neovim/nvim-lspconfig",
+    dependencies = {
+      { "hrsh7th/cmp-nvim-lsp" },
+    },
     event = { "BufReadPre", "BufNewFile" },
     config = function()
       local lspconfig = require("lspconfig")
-      -- if vim.fn.executable('ruby-lsp') == 1 then
-      --   lspconfig["ruby_lsp"].setup({
-      --     init_options = {
-      --       enabledFeatures = {
-      --         diagnostics = false,
-      --         formatting = false
-      --       },
-      --     },
-      --   })
-      -- end
       if vim.fn.executable('rubocop') == 1 then
-        lspconfig["rubocop"].setup({
-          lspconfig["rubocop"].setup({})
+        lspconfig["rubocop"].setup({})
+      end
+      if vim.fn.executable('solargraph') == 1 then
+        lspconfig["solargraph"].setup({
+          settings = {
+            solargraph = {
+              diagnostics = false,
+            },
+          },
+          init_options = { formatting = false },
         })
       end
     end
